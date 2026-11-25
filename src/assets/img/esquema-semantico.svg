@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Menlo, Consolas, monospace">
+  <style>
+    .e{font-size:26px;font-weight:700;fill:#141414}
+    .eb{font-size:26px;font-weight:700;fill:#fff}
+    .d{font-family:Helvetica,Arial,sans-serif;font-size:20px;fill:#4a4743}
+    .db{font-family:Helvetica,Arial,sans-serif;font-size:20px;fill:#e7e4df}
+    .b{stroke:#141414;stroke-width:4}
+  </style>
+  <rect width="900" height="600" fill="#fff"/>
+  <rect class="b" x="30" y="30" width="840" height="100" rx="8" fill="#141414"/>
+  <text class="eb" x="56" y="74">&lt;header&gt;</text>
+  <text class="db" x="56" y="104">logotipo y título del sitio</text>
+  <rect class="b" x="520" y="52" width="326" height="56" rx="6" fill="#c8371e"/>
+  <text class="eb" x="540" y="88">&lt;nav&gt;</text>
+  <text class="db" x="650" y="87" style="fill:#fff">menú principal</text>
+
+  <rect class="b" x="30" y="150" width="580" height="330" rx="8" fill="#e7e4df"/>
+  <text class="e" x="56" y="192">&lt;main&gt;</text>
+  <text class="d" x="200" y="191">contenido principal (uno por página)</text>
+  <rect class="b" x="56" y="212" width="528" height="120" rx="6" fill="#fff"/>
+  <text class="e" x="80" y="252">&lt;article&gt;</text>
+  <text class="d" x="80" y="284">&lt;h1&gt;, &lt;time&gt;, párrafos e imágenes</text>
+  <text class="d" x="80" y="312">de una entrada completa</text>
+  <rect class="b" x="56" y="348" width="528" height="108" rx="6" fill="#fff"/>
+  <text class="e" x="80" y="388">&lt;section&gt;</text>
+  <text class="d" x="80" y="420">un bloque temático con su título</text>
+
+  <rect class="b" x="630" y="150" width="240" height="330" rx="8" fill="#fff" stroke-dasharray="12 9"/>
+  <text class="e" x="654" y="192">&lt;aside&gt;</text>
+  <text class="d" x="654" y="226">contenido</text>
+  <text class="d" x="654" y="252">secundario:</text>
+  <text class="d" x="654" y="278">enlaces, notas,</text>
+  <text class="d" x="654" y="304">publicidad</text>
+
+  <rect class="b" x="30" y="500" width="840" height="70" rx="8" fill="#e7e4df"/>
+  <text class="e" x="56" y="544">&lt;footer&gt;</text>
+  <text class="d" x="220" y="543">autoría, contacto y enlaces legales</text>
+</svg>

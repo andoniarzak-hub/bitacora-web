@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#efece7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#fondo)"/>
+  <!-- cinta -->
+  <rect x="40" y="440" width="1120" height="26" rx="13" fill="#141414"/>
+  <g fill="#ece8e1"><circle cx="80" cy="453" r="6"/><circle cx="240" cy="453" r="6"/><circle cx="400" cy="453" r="6"/><circle cx="800" cy="453" r="6"/><circle cx="960" cy="453" r="6"/><circle cx="1120" cy="453" r="6"/></g>
+  <!-- archivos markdown -->
+  <g stroke="#141414" stroke-width="5">
+    <path d="M110 210h120l40 40v190H110z" fill="#e7e4df"/>
+    <path d="M90 230h120l40 40v170H90z" fill="#fff"/>
+    <path d="M210 230v40h40" fill="none"/>
+  </g>
+  <text x="170" y="370" text-anchor="middle" font-size="44" font-weight="700" fill="#141414" font-family="Menlo, Consolas, monospace">.md</text>
+  <g fill="#141414" opacity=".25"><rect x="114" y="296" width="100" height="10" rx="5"/><rect x="114" y="316" width="80" height="10" rx="5"/></g>
+  <!-- máquina -->
+  <rect x="456" y="150" width="300" height="290" rx="16" fill="#141414"/>
+  <rect x="440" y="134" width="300" height="290" rx="16" fill="#c8371e" stroke="#141414" stroke-width="6"/>
+  <rect x="476" y="170" width="228" height="120" rx="10" fill="#141414"/>
+  <text x="590" y="250" text-anchor="middle" font-size="58" font-weight="800" fill="#fff">11ty</text>
+  <g stroke="#141414" stroke-width="5" fill="#fff">
+    <circle cx="520" cy="352" r="30"/><circle cx="660" cy="352" r="30"/>
+  </g>
+  <g fill="#141414"><circle cx="520" cy="352" r="9"/><circle cx="660" cy="352" r="9"/></g>
+  <rect x="560" y="330" width="60" height="44" rx="6" fill="#e7e4df" stroke="#141414" stroke-width="5"/>
+  <path d="M440 330h-30M770 330h30" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+  <!-- páginas html -->
+  <g stroke="#141414" stroke-width="5">
+    <rect x="904" y="196" width="220" height="244" rx="10" fill="#141414"/>
+    <rect x="884" y="176" width="220" height="244" rx="10" fill="#e7e4df"/>
+    <rect x="864" y="156" width="220" height="250" rx="10" fill="#fff"/>
+    <path d="M864 198h220"/>
+  </g>
+  <g fill="#c8371e"><circle cx="886" cy="177" r="6"/><circle cx="906" cy="177" r="6"/><circle cx="926" cy="177" r="6"/></g>
+  <rect x="888" y="222" width="140" height="18" rx="4" fill="#141414"/>
+  <g fill="#141414" opacity=".25"><rect x="888" y="256" width="170" height="10" rx="5"/><rect x="888" y="276" width="150" height="10" rx="5"/></g>
+  <rect x="888" y="306" width="170" height="74" rx="6" fill="#c8371e" stroke="#141414" stroke-width="4"/>
+  <text x="974" y="530" text-anchor="middle" font-size="34" font-weight="700" fill="#141414" font-family="Menlo, Consolas, monospace">.html</text>
+  <text x="170" y="530" text-anchor="middle" font-size="34" font-weight="700" fill="#141414" font-family="Menlo, Consolas, monospace">texto</text>
+  <text x="590" y="530" text-anchor="middle" font-size="34" font-weight="700" fill="#141414" font-family="Menlo, Consolas, monospace">build</text>
+</svg>

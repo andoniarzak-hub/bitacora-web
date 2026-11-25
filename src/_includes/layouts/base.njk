@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ site.idioma }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.titulo }}</title>
+  <meta name="description" content="{{ resumen or site.descripcion }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | rel }}">
+  <link rel="icon" href="{{ '/assets/img/logo.svg' | rel }}" type="image/svg+xml">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="cabecera-in">
+      <a class="marca" href="{{ '/index.html' | rel }}">
+        <img src="{{ '/assets/img/logo.svg' | rel }}" alt="" width="36" height="36">
+        <span>{{ site.titulo }}</span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+          {%- set enlaces = [
+            ["Inicio", "/index.html", "inicio"],
+            ["Archivo", "/archivo.html", "archivo"],
+            ["Etiquetas", "/etiquetas.html", "etiquetas"],
+            ["Sobre mí", "/sobre-mi.html", "sobre"]
+          ] -%}
+          {%- for e in enlaces %}
+          <li><a href="{{ e[1] | rel }}"{% if seccion == e[2] %} aria-current="page"{% endif %}>{{ e[0] }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    {{ content | safe }}
+  </main>
+
+  <footer class="pie">
+    <div class="pie-in">
+      <div>
+        <p class="pie-marca">{{ site.titulo }}</p>
+        <p>{{ site.descripcion }}</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <ul>
+          <li><a href="{{ '/index.html' | rel }}">Inicio</a></li>
+          <li><a href="{{ '/archivo.html' | rel }}">Archivo</a></li>
+          <li><a href="{{ '/etiquetas.html' | rel }}">Etiquetas</a></li>
+          <li><a href="{{ '/sobre-mi.html' | rel }}">Sobre mí</a></li>
+        </ul>
+      </nav>
+      <p class="pie-legal">© {{ site.anio }} {{ site.autor }} · Hecho con Eleventy, HTML y CSS. Ilustraciones propias.</p>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/main.js' | rel }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+title: Etiquetas
+permalink: /etiquetas.html
+seccion: etiquetas
+resumen: Las entradas de Bitácora Web agrupadas por tema.
+---
+<section class="band estrecha">
+  <h1>Etiquetas</h1>
+  <p class="entradilla">Elige un tema para ver solo las entradas que hablan de él.</p>
+  <ul class="temas">
+    {%- for t in collections.tagList %}
+    {%- set n = (collections.posts | conEtiqueta(t)).length %}
+    <li>
+      <a href="{{ ('/etiquetas/' + (t | slug_es) + '.html') | rel }}">
+        <span class="tema-nombre">{{ t }}</span>
+        <span class="tema-n">{{ n }} {{ "entrada" if n == 1 else "entradas" }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

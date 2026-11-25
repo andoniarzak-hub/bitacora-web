@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d4442a"/><stop offset="1" stop-color="#b52f18"/>
+    </linearGradient>
+    <linearGradient id="luz" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f1eee9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#fondo)"/>
+  <g fill="#fff" opacity=".08">
+    <circle cx="1080" cy="80" r="160"/><circle cx="120" cy="590" r="120"/>
+  </g>
+  <!-- navegador -->
+  <rect x="126" y="166" width="520" height="340" rx="14" fill="#141414"/>
+  <rect x="110" y="150" width="520" height="340" rx="14" fill="url(#luz)" stroke="#141414" stroke-width="6"/>
+  <path d="M110 214h520" stroke="#141414" stroke-width="6"/>
+  <g fill="#141414"><circle cx="146" cy="182" r="9"/><circle cx="176" cy="182" r="9"/><circle cx="206" cy="182" r="9"/></g>
+  <rect x="240" y="168" width="360" height="28" rx="14" fill="#e7e4df" stroke="#141414" stroke-width="3"/>
+  <path d="M259 181v-5a6 6 0 0 1 12 0v5" fill="none" stroke="#c8371e" stroke-width="3"/>
+  <rect x="255" y="180" width="20" height="12" rx="2" fill="#c8371e"/>
+  <rect x="288" y="177" width="200" height="10" rx="5" fill="#141414" opacity=".55"/>
+  <rect x="150" y="250" width="270" height="26" rx="4" fill="#141414"/>
+  <rect x="150" y="296" width="430" height="12" rx="6" fill="#141414" opacity=".25"/>
+  <rect x="150" y="320" width="400" height="12" rx="6" fill="#141414" opacity=".25"/>
+  <rect x="150" y="344" width="420" height="12" rx="6" fill="#141414" opacity=".25"/>
+  <rect x="150" y="384" width="190" height="72" rx="6" fill="#c8371e" stroke="#141414" stroke-width="4"/>
+  <rect x="360" y="384" width="220" height="72" rx="6" fill="#e7e4df" stroke="#141414" stroke-width="4"/>
+  <!-- trayectoria de paquetes -->
+  <path d="M640 330 C 720 230, 790 430, 860 320" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="4 14" stroke-linecap="round"/>
+  <g stroke="#141414" stroke-width="4">
+    <rect x="676" y="268" width="30" height="30" rx="4" fill="#fff"/>
+    <rect x="742" y="322" width="30" height="30" rx="4" fill="#141414"/>
+    <rect x="808" y="346" width="30" height="30" rx="4" fill="#fff"/>
+  </g>
+  <!-- servidor -->
+  <rect x="880" y="146" width="220" height="380" rx="14" fill="#141414"/>
+  <rect x="864" y="130" width="220" height="380" rx="14" fill="#e7e4df" stroke="#141414" stroke-width="6"/>
+  <g stroke="#141414" stroke-width="5" fill="#fff">
+    <rect x="890" y="160" width="168" height="88" rx="8"/>
+    <rect x="890" y="272" width="168" height="88" rx="8"/>
+    <rect x="890" y="384" width="168" height="88" rx="8"/>
+  </g>
+  <g fill="#141414" opacity=".3">
+    <rect x="910" y="198" width="80" height="10" rx="5"/><rect x="910" y="310" width="80" height="10" rx="5"/><rect x="910" y="422" width="80" height="10" rx="5"/>
+  </g>
+  <g fill="#c8371e" stroke="#141414" stroke-width="3">
+    <circle cx="1030" cy="204" r="10"/><circle cx="1030" cy="316" r="10"/>
+  </g>
+  <circle cx="1030" cy="428" r="10" fill="#fff" stroke="#141414" stroke-width="3"/>
+  <!-- suelo -->
+  <rect x="80" y="540" width="1040" height="6" rx="3" fill="#141414" opacity=".35"/>
+</svg>

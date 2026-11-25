@@ -1,0 +1,11 @@
+{#- Tarjeta de entrada. Espera la variable `p` (elemento de collections.posts) -#}
+<article class="tarjeta" data-buscar="{{ (p.data.title + ' ' + p.data.resumen + ' ' + (p.data.tags | sinPost | join(' '))) | lower }}">
+  <a class="tarjeta-img" href="{{ p.url | rel }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ ('/assets/img/' + p.data.portada) | rel }}" alt="" width="1200" height="630" loading="lazy">
+  </a>
+  <div class="tarjeta-txt">
+    <p class="meta"><time datetime="{{ p.date | iso }}">{{ p.date | fecha }}</time> · {{ p.data.tags | sinPost | join(", ") }}</p>
+    <h3><a href="{{ p.url | rel }}">{{ p.data.title }}</a></h3>
+    <p>{{ p.data.resumen }}</p>
+  </div>
+</article>

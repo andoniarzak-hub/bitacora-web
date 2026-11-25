@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+permalink: /index.html
+seccion: inicio
+---
+{%- set ultima = collections.posts[0] -%}
+<section class="portada-blog band">
+  <div class="portada-txt">
+    <h1>Cómo se construye la web, contado mientras la aprendo</h1>
+    <p class="entradilla">{{ site.descripcion }} Cada entrada explica un concepto con ejemplos de código y un esquema propio.</p>
+    <p class="cifras"><strong>{{ collections.posts.length }}</strong> entradas · <strong>{{ collections.tagList.length }}</strong> temas · última actualización el {{ ultima.date | fecha }}</p>
+  </div>
+  <a class="destacada" href="{{ ultima.url | rel }}">
+    <img src="{{ ('/assets/img/' + ultima.data.portada) | rel }}" alt="{{ ultima.data.portada_alt }}" width="1200" height="630">
+    <span class="destacada-pie">
+      <span class="sello">Lo último</span>
+      <span class="destacada-tit">{{ ultima.data.title }}</span>
+    </span>
+  </a>
+</section>
+
+<section class="band listado" aria-labelledby="t-entradas">
+  <div class="listado-cab">
+    <h2 id="t-entradas">Todas las entradas</h2>
+    <label class="buscador">
+      <span class="sr">Buscar entradas</span>
+      <input id="buscar" type="search" placeholder="Buscar por título o tema…" autocomplete="off">
+    </label>
+  </div>
+  <ul class="chips chips-filtro">
+    {%- for t in collections.tagList %}
+    <li><a href="{{ ('/etiquetas/' + (t | slug_es) + '.html') | rel }}">{{ t }}</a></li>
+    {%- endfor %}
+  </ul>
+  <div class="rejilla" id="rejilla">
+    {%- for p in collections.posts %}
+      {% include "tarjeta.njk" %}
+    {%- endfor %}
+  </div>
+  <p class="vacio" id="vacio" hidden>Ninguna entrada coincide con esa búsqueda. Prueba con «HTML», «CSS» o «HTTP».</p>
+</section>

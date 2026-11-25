@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .t{font-size:24px;font-weight:800;fill:#141414}
+    .tb{font-size:24px;font-weight:800;fill:#fff}
+    .c{font-family:Menlo,Consolas,monospace;font-size:19px;fill:#4a4743}
+    .cb{font-family:Menlo,Consolas,monospace;font-size:19px;fill:#e7e4df}
+    .b{stroke:#141414;stroke-width:4}
+    .f{stroke:#141414;stroke-width:5;fill:none;stroke-linecap:round}
+  </style>
+  <defs><marker id="p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#141414"/></marker></defs>
+  <rect width="900" height="560" fill="#fff"/>
+  <!-- entradas -->
+  <rect class="b" x="30" y="40" width="250" height="110" rx="8" fill="#e7e4df"/>
+  <text class="t" x="52" y="84">Contenido</text>
+  <text class="c" x="52" y="118">posts/*.md</text>
+  <rect class="b" x="30" y="180" width="250" height="110" rx="8" fill="#e7e4df"/>
+  <text class="t" x="52" y="224">Plantillas</text>
+  <text class="c" x="52" y="258">_includes/*.njk</text>
+  <rect class="b" x="30" y="320" width="250" height="110" rx="8" fill="#e7e4df"/>
+  <text class="t" x="52" y="364">Estilos e imágenes</text>
+  <text class="c" x="52" y="398">assets/</text>
+  <!-- flechas a eleventy -->
+  <path class="f" d="M280 95c60 0 60 130 108 140" marker-end="url(#p)"/>
+  <path class="f" d="M280 235h108" marker-end="url(#p)"/>
+  <path class="f" d="M280 375c60 0 60-130 108-140" marker-end="url(#p)"/>
+  <!-- eleventy -->
+  <rect class="b" x="400" y="150" width="190" height="170" rx="10" fill="#c8371e"/>
+  <text class="tb" x="495" y="222" text-anchor="middle">Eleventy</text>
+  <text class="cb" x="495" y="256" text-anchor="middle" style="fill:#fff">npm run build</text>
+  <path class="f" d="M590 235h50" marker-end="url(#p)"/>
+  <!-- salida -->
+  <rect class="b" x="652" y="150" width="218" height="170" rx="10" fill="#141414"/>
+  <text class="tb" x="676" y="198">_site/</text>
+  <text class="cb" x="676" y="234">index.html</text>
+  <text class="cb" x="676" y="262">posts/*.html</text>
+  <text class="cb" x="676" y="290">assets/</text>
+  <!-- despliegue -->
+  <path class="f" d="M761 320v62" marker-end="url(#p)"/>
+  <rect class="b" x="560" y="392" width="310" height="120" rx="10" fill="#fff"/>
+  <text class="t" x="584" y="436">GitHub Pages</text>
+  <text class="c" x="584" y="468">se publica con cada</text>
+  <text class="c" x="584" y="494">git push a main</text>
+  <path class="f" d="M560 452H440" marker-end="url(#p)"/>
+  <text class="t" x="420" y="460" text-anchor="end">Lector</text>
+  <text class="c" x="420" y="490" text-anchor="end">recibe HTML ya hecho</text>
+</svg>

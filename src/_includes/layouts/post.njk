@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+seccion: archivo
+---
+{%- set mas_antigua = collections.posts | getNextCollectionItem(page) -%}
+{%- set mas_nueva = collections.posts | getPreviousCollectionItem(page) -%}
+<div class="progreso" aria-hidden="true"><span></span></div>
+
+<article class="entrada">
+  <header class="entrada-cab band">
+    <nav class="migas" aria-label="Ruta">
+      <a href="{{ '/index.html' | rel }}">Inicio</a> <span aria-hidden="true">/</span>
+      <a href="{{ '/archivo.html' | rel }}">Archivo</a> <span aria-hidden="true">/</span>
+      <span aria-current="page">Entrada {{ numero }}</span>
+    </nav>
+    <ul class="chips">
+      {%- for t in tags | sinPost %}
+      <li><a href="{{ ('/etiquetas/' + (t | slug_es) + '.html') | rel }}">{{ t }}</a></li>
+      {%- endfor %}
+    </ul>
+    <h1>{{ title }}</h1>
+    <p class="entradilla">{{ resumen }}</p>
+    <p class="meta">
+      <time datetime="{{ page.date | iso }}">{{ page.date | fecha }}</time>
+      <span aria-hidden="true">·</span> {{ content | lectura }} min de lectura
+      <span aria-hidden="true">·</span> {{ site.autor }}
+    </p>
+  </header>
+
+  <figure class="portada">
+    <img src="{{ ('/assets/img/' + portada) | rel }}" alt="{{ portada_alt }}" width="1200" height="630">
+  </figure>
+
+  <div class="cuerpo">
+    {{ content | safe }}
+  </div>
+
+  <nav class="vecinas" aria-label="Más entradas">
+    {% if mas_antigua %}
+    <a class="vecina" href="{{ mas_antigua.url | rel }}">
+      <span class="vecina-dir">← Entrada anterior</span>
+      <span class="vecina-tit">{{ mas_antigua.data.title }}</span>
+    </a>
+    {% else %}<span></span>{% endif %}
+    {% if mas_nueva %}
+    <a class="vecina vecina-sig" href="{{ mas_nueva.url | rel }}">
+      <span class="vecina-dir">Entrada siguiente →</span>
+      <span class="vecina-tit">{{ mas_nueva.data.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
+</article>

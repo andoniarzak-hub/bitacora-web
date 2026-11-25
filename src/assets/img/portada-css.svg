@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#171513"/>
+  <g stroke="#ece8e1" stroke-width="1" opacity=".08">
+    <path d="M0 105h1200M0 210h1200M0 315h1200M0 420h1200M0 525h1200M150 0v630M300 0v630M450 0v630M600 0v630M750 0v630M900 0v630M1050 0v630"/>
+  </g>
+  <!-- fila flex -->
+  <rect x="96" y="176" width="440" height="150" rx="12" fill="none" stroke="#ece8e1" stroke-width="4" stroke-dasharray="10 10"/>
+  <g stroke="#141414" stroke-width="5">
+    <rect x="124" y="204" width="80" height="94" rx="8" fill="#ece8e1"/>
+    <rect x="218" y="204" width="170" height="94" rx="8" fill="#c8371e"/>
+    <rect x="402" y="204" width="106" height="94" rx="8" fill="#e7e4df"/>
+  </g>
+  <path d="M110 380h400" stroke="#ef6a4f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M496 366l18 14-18 14" fill="none" stroke="#ef6a4f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- rejilla grid -->
+  <rect x="660" y="96" width="440" height="440" rx="14" fill="#221f1c" stroke="#ece8e1" stroke-width="4"/>
+  <g stroke="#141414" stroke-width="5">
+    <rect x="688" y="124" width="250" height="122" rx="8" fill="#c8371e"/>
+    <rect x="952" y="124" width="120" height="256" rx="8" fill="#ece8e1"/>
+    <rect x="688" y="260" width="118" height="120" rx="8" fill="#e7e4df"/>
+    <rect x="820" y="260" width="118" height="120" rx="8" fill="#ece8e1"/>
+    <rect x="688" y="394" width="384" height="114" rx="8" fill="#e7e4df"/>
+  </g>
+  <g fill="#141414" opacity=".35">
+    <rect x="706" y="146" width="120" height="12" rx="6"/><rect x="706" y="168" width="80" height="12" rx="6"/>
+    <rect x="706" y="416" width="200" height="12" rx="6"/>
+  </g>
+  <path d="M630 96v440" stroke="#ef6a4f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M660 566h440" stroke="#ef6a4f" stroke-width="6" stroke-linecap="round"/>
+</svg>

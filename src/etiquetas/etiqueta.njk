@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+seccion: etiquetas
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: etiqueta
+eleventyComputed:
+  title: "Etiqueta: {{ etiqueta }}"
+  resumen: "Entradas de Bitácora Web sobre {{ etiqueta }}."
+permalink: "/etiquetas/{{ etiqueta | slug_es }}.html"
+---
+{%- set lista = collections.posts | conEtiqueta(etiqueta) -%}
+<section class="band listado">
+  <nav class="migas" aria-label="Ruta">
+    <a href="{{ '/index.html' | rel }}">Inicio</a> <span aria-hidden="true">/</span>
+    <a href="{{ '/etiquetas.html' | rel }}">Etiquetas</a> <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ etiqueta }}</span>
+  </nav>
+  <h1>{{ etiqueta }}</h1>
+  <p class="entradilla">{{ lista.length }} {{ "entrada" if lista.length == 1 else "entradas" }} sobre este tema. <a href="{{ '/etiquetas.html' | rel }}">Ver todas las etiquetas</a>.</p>
+  <div class="rejilla">
+    {%- for p in lista %}
+      {% include "tarjeta.njk" %}
+    {%- endfor %}
+  </div>
+</section>

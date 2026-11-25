@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .t{font-size:26px;font-weight:700;fill:#141414}
+    .m{font-size:21px;fill:#141414;font-family:Menlo,Consolas,monospace;stroke:#fff;stroke-width:8px;paint-order:stroke;stroke-linejoin:round}
+    .mr{fill:#c8371e}
+    .n{font-size:20px;font-weight:700;fill:#fff}
+    .v{stroke:#141414;stroke-width:3;stroke-dasharray:6 8}
+    .f{stroke:#141414;stroke-width:4;fill:none}
+    .r{stroke:#c8371e;stroke-width:4;fill:none}
+  </style>
+  <rect width="900" height="560" fill="#fff"/>
+  <defs>
+    <marker id="pn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#141414"/></marker>
+    <marker id="pr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c8371e"/></marker>
+  </defs>
+  <g stroke="#141414" stroke-width="4">
+    <rect x="40" y="30" width="200" height="62" rx="8" fill="#e7e4df"/>
+    <rect x="350" y="30" width="200" height="62" rx="8" fill="#e7e4df"/>
+    <rect x="660" y="30" width="200" height="62" rx="8" fill="#141414"/>
+  </g>
+  <text class="t" x="140" y="70" text-anchor="middle">Navegador</text>
+  <text class="t" x="450" y="70" text-anchor="middle">DNS</text>
+  <text class="t" x="760" y="70" text-anchor="middle" style="fill:#fff">Servidor</text>
+  <path class="v" d="M140 92v440M450 92v440M760 92v440"/>
+
+  <!-- 1. DNS -->
+  <circle cx="60" cy="146" r="17" fill="#c8371e"/><text class="n" x="60" y="153" text-anchor="middle">1</text>
+  <path class="f" d="M140 146h302" marker-end="url(#pn)"/>
+  <text class="m" x="160" y="134">¿IP de ejemplo.com?</text>
+  <path class="r" d="M450 196H148" marker-end="url(#pr)"/>
+  <text class="m mr" x="190" y="184">93.184.215.14</text>
+
+  <!-- 2. TCP + TLS -->
+  <circle cx="60" cy="266" r="17" fill="#c8371e"/><text class="n" x="60" y="273" text-anchor="middle">2</text>
+  <path class="f" d="M140 266h612" marker-end="url(#pn)"/>
+  <text class="m" x="450" y="254" text-anchor="middle">TCP: SYN · SYN-ACK · ACK</text>
+  <path class="r" d="M760 310H148" marker-end="url(#pr)"/>
+  <text class="m mr" x="450" y="298" text-anchor="middle">TLS: certificado y claves</text>
+
+  <!-- 3. HTTP -->
+  <circle cx="60" cy="384" r="17" fill="#c8371e"/><text class="n" x="60" y="391" text-anchor="middle">3</text>
+  <path class="f" d="M140 384h612" marker-end="url(#pn)"/>
+  <text class="m" x="450" y="372" text-anchor="middle">GET /index.html</text>
+  <path class="r" d="M760 428H148" marker-end="url(#pr)"/>
+  <text class="m mr" x="450" y="416" text-anchor="middle">200 OK + HTML</text>
+
+  <!-- 4. Renderizado -->
+  <circle cx="60" cy="497" r="17" fill="#c8371e"/><text class="n" x="60" y="504" text-anchor="middle">4</text>
+  <rect x="96" y="470" width="320" height="54" rx="8" fill="#e7e4df" stroke="#141414" stroke-width="4"/>
+  <text x="256" y="505" text-anchor="middle" font-size="21" font-family="Menlo,Consolas,monospace" fill="#141414">DOM + CSSOM → píxeles</text>
+</svg>

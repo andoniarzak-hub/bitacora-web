@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+title: Archivo
+permalink: /archivo.html
+seccion: archivo
+resumen: Todas las entradas de Bitácora Web ordenadas por fecha.
+---
+<section class="band estrecha">
+  <h1>Archivo</h1>
+  <p class="entradilla">Todas las entradas, de la más reciente a la más antigua.</p>
+  {%- for p in collections.posts %}
+    {%- set mes = p.date | mesAnio -%}
+    {%- set mesPrevio = (collections.posts[loop.index0 - 1].date | mesAnio) if not loop.first else "" -%}
+    {%- if mes != mesPrevio %}
+      {%- if not loop.first %}</ol>{% endif %}
+  <h2 class="mes">{{ mes }}</h2>
+  <ol class="cronologia">
+    {%- endif %}
+    <li>
+      <time datetime="{{ p.date | iso }}">{{ p.date | fecha }}</time>
+      <div>
+        <a href="{{ p.url | rel }}">{{ p.data.title }}</a>
+        <p>{{ p.data.resumen }}</p>
+      </div>
+    </li>
+    {%- if loop.last %}</ol>{% endif %}
+  {%- endfor %}
+</section>
