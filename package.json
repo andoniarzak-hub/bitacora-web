@@ -1,0 +1,16 @@
+{
+  "name": "bitacora-web",
+  "version": "1.0.0",
+  "description": "Blog estático hecho con Eleventy (Actividad 1, Desarrollo de Aplicaciones en Red)",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  },
+  "type": "module"
+}
